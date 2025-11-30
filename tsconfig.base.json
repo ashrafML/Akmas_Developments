@@ -1,0 +1,31 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "Radiologist/Routes": [
+        "apps/Radiologist/src/app/remote-entry/entry.routes.ts"
+      ],
+      "Chat_AI/Routes": ["apps/Chat_AI/src/app/remote-entry/entry.routes.ts"],
+      "Architect_doc/Routes": [
+        "apps/Architect_doc/src/app/remote-entry/entry.routes.ts"
+      ],
+      "@akmas-front-monorepo/Event-servic": [
+        "Libs/shared/Event-servic/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
