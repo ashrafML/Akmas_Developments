@@ -1,0 +1,5 @@
+{
+  "Radiologist": "http://localhost:4201/mf-manifest.json",
+  "Chat_AI": "http://localhost:4205/mf-manifest.json",
+  "Architect_doc": "http://localhost:4203/mf-manifest.json"
+}
