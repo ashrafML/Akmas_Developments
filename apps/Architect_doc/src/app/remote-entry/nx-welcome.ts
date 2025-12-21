@@ -868,6 +868,7 @@ nx g &#64;nx/angular:component ui/src/lib/button</pre>
 })
 export class NxWelcome {
   private servic=inject(DomainEvent)
+<<<<<<< HEAD
   private readonly CUSTOM_EVENT_NAME = 'mfe-event-bus';
 
 Send(arg0: any) {
@@ -884,4 +885,11 @@ Send(arg0: any) {
 }
 txtinput: any;
 
+=======
+
+Send(arg0: any) {
+  this.servic.checkEvent(this.txtinput);
+}
+txtinput: any;
+>>>>>>> 5484fbcc336596cd899413440be95e37f77f75c6
 }

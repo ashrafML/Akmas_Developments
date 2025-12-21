@@ -10,6 +10,7 @@ import { NxWelcome } from './nx-welcome';
 })
 export class App {
   protected title = 'Shell';
+<<<<<<< HEAD
   constructor(){
 //     const host = document.querySelector('#host-element');
 
@@ -22,4 +23,6 @@ export class App {
 //   <p>I am hidden in the Shadow DOM!</p>
 // `;
    }
+=======
+>>>>>>> 5484fbcc336596cd899413440be95e37f77f75c6
 }
