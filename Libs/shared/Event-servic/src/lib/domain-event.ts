@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
+//import {RnderRct} from '../../../../../apps/Shell/src/app/component/react/rnder_rct';
 @Injectable({
   providedIn: 'root',
 })

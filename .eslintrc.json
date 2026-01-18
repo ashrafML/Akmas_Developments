@@ -1,0 +1,99 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+
+            "depConstraints": [
+              /* ============================
+                 APP RULES
+                 ============================ */
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access",
+                  "scope:shared"
+                ],
+                "notDependOnLibsWithTags": ["type:app"]
+              },
+
+              /* ============================
+                 FEATURE RULES
+                 ============================ */
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:data-access",
+                  "scope:shared"
+                ]
+              },
+
+              /* ============================
+                 UI RULES
+                 ============================ */
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:ui", "scope:shared"],
+                "notDependOnLibsWithTags": ["type:data-access", "type:feature"]
+              },
+
+              /* ============================
+                 DATA ACCESS RULES
+                 ============================ */
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:data-access", "scope:shared"],
+                "notDependOnLibsWithTags": ["type:ui", "type:feature"]
+              },
+
+              /* ============================
+                 FRAMEWORK ISOLATION
+                 ============================ */
+              {
+                "sourceTag": "framework:angular",
+                "onlyDependOnLibsWithTags": [
+                  "framework:angular",
+                  "scope:shared"
+                ]
+              },
+              {
+                "sourceTag": "framework:react",
+                "onlyDependOnLibsWithTags": [
+                  "framework:react",
+                  "scope:shared"
+                ]
+              },
+
+              /* ============================
+                 DOMAIN (SCOPE) ISOLATION
+                 ============================ */
+              {
+                "sourceTag": "scope:shell",
+                "onlyDependOnLibsWithTags": ["scope:shell", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:products",
+                "onlyDependOnLibsWithTags": ["scope:products", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:orders",
+                "onlyDependOnLibsWithTags": ["scope:orders", "scope:shared"]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

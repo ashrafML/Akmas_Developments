@@ -4,7 +4,10 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/Radiologist/src",
-  "tags": [],
+  "tags": ["type:app",
+    "mf:remote",
+    "framework:angular",
+    "scope:Radiologist"],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",

@@ -4,10 +4,15 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/Shell/src",
-  "tags": [],
+  "tags": [ "type:app",
+    "mf:host",
+    "framework:angular",
+    "scope:shell"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",
+      "dependsOn": ["architecture-tests:test"],
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/Shell",
@@ -83,7 +88,8 @@
       "executor": "@nx/vitest:test",
       "outputs": ["{options.reportsDirectory}"],
       "options": {
-        "reportsDirectory": "../../coverage/apps/Shell"
+        "reportsDirectory": "../../coverage/apps/Shell",
+        "configFile": "apps/shell/vitest.config.ts"
       }
     },
     "serve-static": {

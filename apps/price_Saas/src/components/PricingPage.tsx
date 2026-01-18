@@ -163,7 +163,7 @@ export function PricingPage() {
   useEffect(() => {
     const handler = (event: any) => {
       const { eventType, data } = event.detail || {};
-      
+      console.log('🎯 Event received in Price-SaaS:', eventType, data);
       if (eventType === 'react-wrp-event') {
         console.log('✅ Updating message state:', event);
         setEventReturn("Event Data received in Price-SaaS: " + data);
@@ -189,12 +189,12 @@ export function PricingPage() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
-          <button 
+          {/* <button 
   className="bg-blue-500 text-white p-2"
   onClick={() => setEventReturn("Manual Update Working")}
 >
   Test React State
-</button>
+</button> */}
           <h1 className="text-5xl font-extrabold text-gray-900 sm:text-6xl">
             Choose Your Plan
           </h1>

@@ -20,7 +20,7 @@ export class Wrapper implements AfterViewInit {
   
 private service=inject(DomainEvent);
 eevntlisener=this.service.ReturnValue;
-private valuesendtoarchitect:string="";
+private valuesendtoarchitect:any="";
   ngAfterViewInit() {
     
       this.loadRemoteComponent();

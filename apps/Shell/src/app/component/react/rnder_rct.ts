@@ -3,6 +3,7 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, inject, ViewChild } from '@angular/core';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+//import {supabase} from '../../../../../price_Saas/src/lib/supabase';
 @Component({
   selector: 'app-rnder-rct',
   imports: [],
@@ -21,7 +22,7 @@ export class RnderRct {
   
 private service=inject(DomainEvent);
 eevntlisener=this.service.ReturnValue;
-private valuesendtoarchitect:string="";
+private valuesendtoarchitect:any="";
   ngAfterViewInit() {
     
       this.loadRemoteComponent();
@@ -45,7 +46,7 @@ async loadRemoteComponent() {
   try {
     const module = await loadRemoteModule({
       type: 'module',
-      remoteEntry: 'http://localhost/My_App_rect/remoteEntry.js',  
+      remoteEntry: 'http://localhost/Price_SaaS/remoteEntry.js',  
       exposedModule: './Module',
     });
 
