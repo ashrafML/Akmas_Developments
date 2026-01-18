@@ -4,7 +4,12 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/Chat_AI/src",
-  "tags": [],
+  "tags": [
+      "type:app",
+    "mf:remote",
+    "framework:angular",
+    "scope:Chat_AI"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",

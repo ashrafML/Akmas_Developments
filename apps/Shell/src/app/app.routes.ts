@@ -1,7 +1,6 @@
 import { NxWelcome } from './nx-welcome';
 import { Route } from '@angular/router';
 import { loadRemote } from '@module-federation/enhanced/runtime';
-<<<<<<< HEAD
 import { Wrapper } from './component/wrapper';
 import { WrapperVue } from './component/Vue/Wrpper_vue';
 import { RnderRct } from './component/react/rnder_rct';
@@ -11,10 +10,10 @@ export const appRoutes: Route[] = [
     path:'My-App',
     component:RnderRct
   },
-=======
-
-export const appRoutes: Route[] = [
->>>>>>> 5484fbcc336596cd899413440be95e37f77f75c6
+  {
+  path: 'Vue_vote',
+  component: WrapperVue,
+  },
   {
     path: 'Architect_doc',
     loadChildren: () =>

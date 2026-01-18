@@ -3,7 +3,7 @@ import { NxWelcome } from './nx-welcome';
 
 @Component({
   imports: [NxWelcome],
-  selector: 'app-Architect_doc-entry',
+  selector: 'architect-doc-remote-entry',
   template: `<app-nx-welcome></app-nx-welcome>`,
 })
 export class RemoteEntry {}

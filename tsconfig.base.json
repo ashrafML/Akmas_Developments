@@ -24,6 +24,9 @@
       ],
       "@akmas-front-monorepo/Event-servic": [
         "Libs/shared/Event-servic/src/index.ts"
+      ],
+      "@akmas-front-monorepo/architecture-tests": [
+        "architecture-tests/src/index.ts"
       ]
     }
   },

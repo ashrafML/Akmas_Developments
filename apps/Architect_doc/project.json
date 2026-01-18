@@ -4,7 +4,12 @@
   "projectType": "application",
   "prefix": "app",
   "sourceRoot": "apps/Architect_doc/src",
-  "tags": [],
+  "tags": [
+    "type:app",
+    "mf:remote",
+    "framework:angular",
+    "scope:architect"
+  ],
   "targets": {
     "build": {
       "executor": "@nx/angular:webpack-browser",

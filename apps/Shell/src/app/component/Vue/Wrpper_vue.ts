@@ -16,7 +16,7 @@ export class WrapperVue implements AfterViewInit, OnDestroy {
     try {
       const module = await loadRemoteModule({
         type: 'module',
-        remoteEntry: 'http://localhost/Vue_SaaS/remoteEntry.js',  
+        remoteEntry: 'http://localhost/Vue_vote/remoteEntry.js',  
         exposedModule: './Module',
       });
 

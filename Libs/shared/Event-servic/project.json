@@ -4,7 +4,9 @@
   "sourceRoot": "Libs/shared/Event-servic/src",
   "prefix": "lib",
   "projectType": "library",
-  "tags": [],
+  "tags": [ "type:event-bus",
+    "framework:angular",
+    "scope:event-servic"],
   "targets": {
     "lint": {
       "executor": "@nx/eslint:lint"
